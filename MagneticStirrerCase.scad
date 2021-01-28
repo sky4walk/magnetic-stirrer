@@ -3,7 +3,7 @@
 // Magnetic stirrer case
 // Zwieselbrau.de
 
-WandD           =  5;
+WandD           =  3;
 LuefterH        = 25.5;
 LuefterB        = 92.5;
 LuefterT        = 92.5;
@@ -20,12 +20,12 @@ $fn=100;
 difference() {
     cube([  LuefterB+PotiB+2*WandD,
             LuefterT+2*WandD,
-            LuefterH+DistHolderBT+WandD ],
+            LuefterH+MagnetH+WandD ],
             center = false);
     translate([WandD,WandD,-1])
         cube([  LuefterB+PotiB,
                 LuefterT,
-                LuefterH+DistHolderBT],
+                LuefterH+MagnetH],
                 center = false);
     translate([LuefterB+WandD+PotiB/2,WandD+1,(LuefterH+DistHolderBT)/2])
         rotate(a=[90,0,0])
